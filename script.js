@@ -7,13 +7,9 @@ function setLang(lang) {
   document.querySelectorAll("[data-en]").forEach(el => {
     el.textContent = el.getAttribute(`data-${lang}`);
   });
-
-  // Save the chosen language
-  localStorage.setItem("lang", lang);
 }
 
-// Load preferred language on page load
+// Run after page is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("lang") || "ar"; // default Arabic
-  setLang(savedLang);
+  setLang("ar"); // Always default to Arabic on first load
 });
