@@ -1,16 +1,35 @@
-/* General */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
   background: #f5f7fa;
   color: #333;
+  transition: direction 0.3s ease;
+}
+
+/* Language switch */
+.lang-switch {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+.lang-switch button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #ffb400;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.lang-switch button:hover {
+  background: #e69a00;
 }
 
 /* Hero */
 .hero {
-  background: url("https://images.unsplash.com/photo-1509395176047-4a66953fd231") no-repeat center center/cover;
-  height: 90vh;
+  background: url("https://picsum.photos/1600/600?random=4") no-repeat center/cover;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,19 +42,17 @@ body {
   border-radius: 12px;
 }
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
 }
 .btn {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 10px 20px;
   margin-top: 15px;
   background: #ffb400;
   color: white;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
-  transition: background 0.3s ease;
 }
 .btn:hover {
   background: #e69a00;
@@ -43,54 +60,40 @@ body {
 
 /* Sections */
 section {
-  padding: 60px 20px;
+  padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
 }
 h2 {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
 }
 
 /* Services */
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 .card {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow: hidden;
-  transition: transform 0.3s;
-}
-.card:hover {
-  transform: translateY(-8px);
+  text-align: center;
 }
 .card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 .card h3 {
-  margin: 15px;
+  margin: 15px 0;
 }
 .card p {
-  margin: 0 15px 20px 15px;
+  padding: 0 15px 20px;
   color: #555;
-}
-
-/* Why Solar */
-#why ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-#why li {
-  font-size: 1.2rem;
-  margin: 10px 0;
 }
 
 /* Footer */
