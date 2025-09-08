@@ -27,3 +27,16 @@ cards.forEach(card => {
   card.style.transform = "translateY(40px)";
   card.style.transition = "all 0.6s ease-out";
 });
+
+// Language switch
+function setLang(lang) {
+  document.body.dir = (lang === "ar") ? "rtl" : "ltr";
+  document.querySelectorAll("[data-en]").forEach(el => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
+}
+
+// Default language
+setLang("en");
+
+
