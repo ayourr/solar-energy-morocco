@@ -7,4 +7,4 @@ function setLang(lang) {
 }
 
 // Default language
-setLang("en");
+setLang("ar");
