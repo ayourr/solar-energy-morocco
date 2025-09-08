@@ -7,66 +7,67 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Language Switcher -->
+  <div class="lang-switch">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ar')">AR</button>
+  </div>
+
   <!-- Hero Section -->
   <header class="hero">
     <div class="hero-text">
-      <h1>☀️ Solar Energy Morocco</h1>
-      <p>Power your home and business with clean, renewable energy.</p>
-      <a href="#contact" class="btn">Get a Free Quote</a>
+      <h1 data-en="☀️ Solar Energy Morocco" data-ar="☀️ الطاقة الشمسية المغرب"></h1>
+      <p data-en="Power your home and business with clean, renewable energy."
+         data-ar="زود منزلك وعملك بالطاقة النظيفة والمتجددة."></p>
+      <a href="#contact" class="btn" data-en="Get a Free Quote" data-ar="احصل على عرض مجاني"></a>
     </div>
   </header>
 
   <!-- Services Section -->
   <section id="services">
-    <h2>⚡ Our Services</h2>
+    <h2 data-en="⚡ Our Services" data-ar="⚡ خدماتنا"></h2>
     <div class="services">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="Solar Panel Installation">
-        <h3>Solar Panel Installation</h3>
-        <p>Complete design and installation of solar panels for homes and businesses.</p>
+        <img src="https://picsum.photos/400/250?random=1" alt="Solar Installation">
+        <h3 data-en="Solar Panel Installation" data-ar="تركيب الألواح الشمسية"></h3>
+        <p data-en="Complete design and installation of solar panels for homes and businesses."
+           data-ar="تصميم وتركيب كامل للألواح الشمسية للمنازل والشركات."></p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Electrical Maintenance">
-        <h3>Electrical Maintenance</h3>
-        <p>Safe, efficient, and professional repair & maintenance services.</p>
+        <img src="https://picsum.photos/400/250?random=2" alt="Electrical Maintenance">
+        <h3 data-en="Electrical Maintenance" data-ar="الصيانة الكهربائية"></h3>
+        <p data-en="Safe, efficient, and professional repair & maintenance services."
+           data-ar="خدمات إصلاح وصيانة آمنة وفعالة واحترافية."></p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1569225027569-1f1b3e95a395" alt="Energy Consulting">
-        <h3>Energy Consulting</h3>
-        <p>Reduce your bills with expert energy audits and consulting services.</p>
+        <img src="https://picsum.photos/400/250?random=3" alt="Energy Consulting">
+        <h3 data-en="Energy Consulting" data-ar="الاستشارات الطاقية"></h3>
+        <p data-en="Reduce your bills with expert energy audits and consulting services."
+           data-ar="قلل فواتيرك بفضل خبراء التدقيق والاستشارات الطاقية."></p>
       </div>
     </div>
   </section>
 
-  <!-- Why Solar Section -->
-  <section id="why">
-    <h2>🌍 Why Choose Solar?</h2>
-    <ul>
-      <li>✔ Save up to 70% on electricity bills</li>
-      <li>✔ Eco-friendly & renewable energy</li>
-      <li>✔ Increase property value</li>
-      <li>✔ Government incentives available</li>
-    </ul>
-  </section>
-
-  <!-- About Section -->
+  <!-- About -->
   <section id="about">
-    <h2>👷 About Us</h2>
-    <p>At <strong>Solar Energy Morocco</strong>, we are passionate about providing sustainable energy solutions.  
-    Our certified experts deliver top-quality solar panel installations and electrical services tailored to your needs.</p>
+    <h2 data-en="👷 About Us" data-ar="👷 من نحن"></h2>
+    <p data-en="We are passionate about providing sustainable energy solutions in Morocco."
+       data-ar="نحن شغوفون بتقديم حلول طاقة مستدامة في المغرب."></p>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
-    <h2>📞 Contact Us</h2>
+    <h2 data-en="📞 Contact Us" data-ar="📞 اتصل بنا"></h2>
     <p>Email: <a href="mailto:info@solar-energy-morocco.com">info@solar-energy-morocco.com</a></p>
-    <p>Phone: +212 6 12 34 56 78</p>
-    <a href="https://wa.me/212612345678" class="btn" target="_blank">💬 Chat on WhatsApp</a>
+    <p data-en="Phone: +212 6 12 34 56 78" data-ar="الهاتف: +212 6 12 34 56 78"></p>
+    <a href="https://wa.me/212612345678" class="btn" target="_blank"
+       data-en="💬 Chat on WhatsApp" data-ar="💬 تحدث عبر واتساب"></a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Solar Energy Morocco. All rights reserved.</p>
+    <p data-en="© 2025 Solar Energy Morocco. All rights reserved."
+       data-ar="© 2025 الطاقة الشمسية المغرب. جميع الحقوق محفوظة."></p>
   </footer>
 
   <script src="script.js"></script>
