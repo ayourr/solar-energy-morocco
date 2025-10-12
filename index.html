@@ -69,10 +69,40 @@
   <!-- Contact -->
   <section id="contact">
     <h2 data-en="📞 Contact Us" data-ar="📞 اتصل بنا"></h2>
-    <p>Email: <a href="mailto:info@solar-energy-morocco.com">info@solar-energy-morocco.com</a></p>
-    <p data-en="Phone: +212762980932" data-ar="Phone: +212762980932"></p>
-    <a href="https://wa.me/212762980932" class="btn" target="_blank"
-       data-en="💬 Chat on WhatsApp" data-ar="💬 تحدث عبر واتساب"></a>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <p>Email: <a href="mailto:info@solar-energy-morocco.com">info@solar-energy-morocco.com</a></p>
+        <p data-en="Phone: +212762980932" data-ar="هاتف: ‎+212762980932"></p>
+        <a href="https://wa.me/212762980932" class="btn" target="_blank"
+           data-en="💬 Chat on WhatsApp" data-ar="💬 تحدث عبر واتساب"></a>
+      </div>
+      <form id="contact-form" class="contact-card contact-form">
+        <div class="form-group">
+          <label for="name" data-en="Full Name" data-ar="الاسم الكامل"></label>
+          <input id="name" name="name" type="text" required
+                 data-en-placeholder="Your name" data-ar-placeholder="اسمك" />
+        </div>
+        <div class="form-group">
+          <label for="email" data-en="Email Address" data-ar="البريد الإلكتروني"></label>
+          <input id="email" name="email" type="email" required
+                 data-en-placeholder="example@email.com" data-ar-placeholder="example@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="phone" data-en="Phone Number" data-ar="رقم الهاتف"></label>
+          <input id="phone" name="phone" type="tel"
+                 data-en-placeholder="+212..." data-ar-placeholder="+212..." />
+        </div>
+        <div class="form-group">
+          <label for="message" data-en="Project Details" data-ar="تفاصيل المشروع"></label>
+          <textarea id="message" name="message" rows="4" required
+                    data-en-placeholder="Tell us about your project"
+                    data-ar-placeholder="أخبرنا عن مشروعك"></textarea>
+        </div>
+        <button type="submit" class="btn"
+                data-en="Send Request" data-ar="أرسل الطلب"></button>
+        <p id="contact-status" class="contact-status" role="alert"></p>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->

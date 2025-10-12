@@ -115,6 +115,55 @@ h2 {
   color: #333;
 }
 
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+.contact-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #28a745;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.contact-form button {
+  width: fit-content;
+}
+.contact-status {
+  min-height: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.contact-status.error {
+  color: #c82333;
+}
+.contact-status.success {
+  color: #28a745;
+}
+
 /* Footer */
 footer {
   background: #28a745;
