@@ -1,219 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Solar Energy Morocco | Installation & Maintenance</title>
-  <meta name="description" content="Solar panel installation, electrical maintenance, and energy consulting across Morocco. Get a free quote in 24h." />
+  <title>Solar Energy Morocco | Site en maintenance</title>
+  <meta name="description" content="Solar Energy Morocco - Site en maintenance. Contactez-nous par WhatsApp, téléphone ou email." />
 
-  <!-- Open Graph (pour WhatsApp/Facebook) -->
+  <!-- Open Graph (aperçu WhatsApp/Facebook) -->
   <meta property="og:title" content="Solar Energy Morocco" />
-  <meta property="og:description" content="Clean solar solutions for homes and businesses in Morocco." />
+  <meta property="og:description" content="Site en maintenance. Contactez-nous pour un devis solaire." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/solar1.jpeg" />
 
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.14);
+      --text:#e2e8f0;
+      --muted:#94a3b8;
+      --accent:#ffb400;
+      --green:#22c55e;
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% 10%, rgba(34,197,94,.18), transparent 60%),
+        radial-gradient(900px 500px at 90% 30%, rgba(255,180,0,.12), transparent 60%),
+        linear-gradient(180deg, #0b1220, #060a12);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .wrap{
+      width:min(980px, 100%);
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 860px){
+      .wrap{ grid-template-columns: 1fr; }
+    }
+    .panel{
+      border:1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      padding:28px;
+    }
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight: 900;
+      letter-spacing:-.02em;
+    }
+    .brand .mark{
+      width:42px;height:42px;
+      display:grid;place-items:center;
+      border-radius:14px;
+      background:rgba(255,180,0,.14);
+      border:1px solid rgba(255,180,0,.22);
+      font-size:20px;
+    }
+    .lang{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .lang button{
+      border:1px solid var(--border);
+      background:transparent;
+      color:var(--text);
+      padding:8px 12px;
+      border-radius:14px;
+      cursor:pointer;
+      font-weight:800;
+      opacity:.9;
+    }
+    .lang button:hover{ opacity:1; border-color: rgba(255,255,255,.25); }
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      letter-spacing:-.02em;
+      line-height:1.15;
+    }
+    p{ margin:0 0 14px; color:var(--muted); font-size: 1.02rem; line-height:1.6; }
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:18px 0 8px;
+    }
+    .badge{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      padding:10px 12px;
+      border-radius: 16px;
+      font-weight:800;
+      font-size:14px;
+      color:var(--text);
+      display:flex;
+      gap:8px;
+      align-items:center;
+      white-space:nowrap;
+    }
+    .cta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 16px;
+      border-radius: 16px;
+      border:0;
+      cursor:pointer;
+      font-weight:900;
+      text-decoration:none;
+      color:#0b1220;
+      background: var(--accent);
+      box-shadow: 0 16px 40px rgba(255,180,0,.18);
+    }
+    .btn:hover{ filter: brightness(.97); }
+    .btn.secondary{
+      background:transparent;
+      color:var(--text);
+      border:1px solid var(--border);
+      box-shadow:none;
+    }
+    .info{
+      display:grid;
+      gap:10px;
+      margin-top:16px;
+      font-size:15px;
+      color:var(--text);
+    }
+    .info a{ color: var(--text); text-decoration:none; }
+    .info a:hover{ text-decoration:underline; }
+    .small{
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+    .side h2{
+      margin:0 0 12px;
+      font-size:1.1rem;
+      letter-spacing:-.01em;
+    }
+    .side ul{
+      margin:0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height:1.75;
+    }
+    .note{
+      margin-top:16px;
+      padding:14px;
+      border-radius: 18px;
+      border:1px solid rgba(34,197,94,.22);
+      background: rgba(34,197,94,.08);
+      color: var(--text);
+      font-weight:700;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div class="topbar-left">
-        <span>📍 Morocco</span>
-        <a href="tel:+212762980932">📞 +212 762 980 932</a>
-      </div>
-      <div class="lang-switch">
-        <button type="button" onclick="setLang('en')">EN</button>
-        <button type="button" onclick="setLang('ar')">AR</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <a class="brand" href="#">
-        <span class="brand-mark">☀️</span>
-        <span class="brand-text">Solar Energy Morocco</span>
-      </a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
-
-      <div class="nav-links" id="navLinks">
-        <a href="#services" data-en="Services" data-ar="الخدمات"></a>
-        <a href="#projects" data-en="Projects" data-ar="المشاريع"></a>
-        <a href="#why" data-en="Why Us" data-ar="لماذا نحن"></a>
-        <a href="#contact" class="btn btn-small" data-en="Free Quote" data-ar="عرض مجاني"></a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1 data-en="Solar Energy Solutions in Morocco" data-ar="حلول الطاقة الشمسية في المغرب"></h1>
-        <p data-en="Professional installation, maintenance, and energy consulting. Get your quote in 24 hours."
-           data-ar="تركيب احترافي، صيانة، واستشارات طاقية. احصل على عرض خلال 24 ساعة."></p>
-
-        <div class="hero-actions">
-          <a href="#contact" class="btn" data-en="Get a Free Quote" data-ar="احصل على عرض مجاني"></a>
-          <a href="https://wa.me/212762980932" class="btn btn-outline" target="_blank"
-             data-en="WhatsApp" data-ar="واتساب"></a>
+  <main class="wrap">
+    <!-- Main panel -->
+    <section class="panel">
+      <div class="top">
+        <div class="brand">
+          <div class="mark">☀️</div>
+          <div>Solar Energy Morocco</div>
         </div>
-
-        <div class="trust-badges">
-          <div class="badge" data-en="✅ Certified Technicians" data-ar="✅ تقنيون معتمدون"></div>
-          <div class="badge" data-en="🛡️ Warranty & After-Sales" data-ar="🛡️ ضمان وخدمة ما بعد البيع"></div>
-          <div class="badge" data-en="⚡ Fast Installation" data-ar="⚡ تركيب سريع"></div>
+        <div class="lang" aria-label="Language switcher">
+          <button type="button" onclick="setLang('fr')">FR</button>
+          <button type="button" onclick="setLang('en')">EN</button>
+          <button type="button" onclick="setLang('ar')">AR</button>
         </div>
       </div>
-    </div>
-  </header>
 
-  <!-- Services -->
-  <section id="services" class="section">
-    <div class="container">
-      <h2 data-en="Our Services" data-ar="خدماتنا"></h2>
+      <h1 id="title">🚧 Site en maintenance</h1>
+      <p id="subtitle">
+        Nous améliorons notre site pour vous offrir une meilleure expérience. En attendant, vous pouvez nous contacter directement pour un devis gratuit.
+      </p>
 
-      <div class="services">
-        <div class="card">
-          <img src="images/solar1.jpeg" alt="Solar Panel Installation">
-          <h3 data-en="Solar Panel Installation" data-ar="تركيب الألواح الشمسية"></h3>
-          <p data-en="Design, sizing, and installation for homes, farms, and businesses."
-             data-ar="تصميم وحساب القدرة والتركيب للمنازل والمزارع والشركات."></p>
-          <ul class="mini-list">
-            <li data-en="• Study & sizing" data-ar="• دراسة وحساب"></li>
-            <li data-en="• Quality materials" data-ar="• مواد عالية الجودة"></li>
-            <li data-en="• Safe wiring" data-ar="• توصيل آمن"></li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <img src="images/solar2.jpeg" alt="Electrical Maintenance">
-          <h3 data-en="Electrical Maintenance" data-ar="الصيانة الكهربائية"></h3>
-          <p data-en="Preventive and corrective maintenance for safe and reliable systems."
-             data-ar="صيانة وقائية وتصحيحية لأنظمة آمنة وموثوقة."></p>
-          <ul class="mini-list">
-            <li data-en="• Troubleshooting" data-ar="• تشخيص الأعطال"></li>
-            <li data-en="• Panel upgrades" data-ar="• تحديث اللوحات"></li>
-            <li data-en="• Safety checks" data-ar="• فحوصات السلامة"></li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <img src="images/solar3.jpeg" alt="Energy Consulting">
-          <h3 data-en="Energy Consulting" data-ar="الاستشارات الطاقية"></h3>
-          <p data-en="Reduce your bills with energy audits and optimization plans."
-             data-ar="خفض الفواتير عبر تدقيق واختيار حلول مثالية."></p>
-          <ul class="mini-list">
-            <li data-en="• Energy audit" data-ar="• تدقيق طاقي"></li>
-            <li data-en="• ROI estimation" data-ar="• تقدير العائد"></li>
-            <li data-en="• Best system choice" data-ar="• اختيار النظام الأفضل"></li>
-          </ul>
-        </div>
+      <div class="badges">
+        <div class="badge">✅ <span id="b1">Devis gratuit</span></div>
+        <div class="badge">🛡️ <span id="b2">Garantie & SAV</span></div>
+        <div class="badge">⚡ <span id="b3">Installation rapide</span></div>
       </div>
-    </div>
-  </section>
 
-  <!-- Projects -->
-  <section id="projects" class="section section-alt">
-    <div class="container">
-      <h2 data-en="Recent Projects" data-ar="أحدث المشاريع"></h2>
-
-      <div class="gallery">
-        <img src="images/WhatsApp Image 2025-09-08 at 13.19.12.jpeg" alt="Project 1">
-        <img src="images/WhatsApp Image 2025-09-08 at 13.19.13.jpeg" alt="Project 2">
-        <img src="images/WhatsApp Image 2025-09-08 at 13.19.14.jpeg" alt="Project 3">
-        <img src="images/WhatsApp Image 2025-09-08 at 13.19.15.jpeg" alt="Project 4">
+      <div class="cta">
+        <a class="btn" href="https://wa.me/212762980932" target="_blank" rel="noopener">
+          💬 <span id="wa">WhatsApp</span>
+        </a>
+        <a class="btn secondary" href="tel:+212762980932">📞 <span id="call">Appeler</span></a>
+        <a class="btn secondary" href="mailto:info@solar-energy-morocco.com">✉️ <span id="mail">Email</span></a>
       </div>
-    </div>
-  </section>
 
-  <!-- Why -->
-  <section id="why" class="section">
-    <div class="container">
-      <h2 data-en="Why Choose Us?" data-ar="لماذا تختارنا؟"></h2>
-
-      <div class="why-grid">
-        <div class="why-card">
-          <h3 data-en="Transparent Pricing" data-ar="سعر واضح"></h3>
-          <p data-en="We provide a clear quote with material and installation details."
-             data-ar="نقدم عرضًا واضحًا مع تفاصيل المواد والتركيب."></p>
-        </div>
-        <div class="why-card">
-          <h3 data-en="Quality & Safety" data-ar="الجودة والسلامة"></h3>
-          <p data-en="Safe wiring, reliable components, and professional installation."
-             data-ar="توصيل آمن ومكونات موثوقة وتركيب احترافي."></p>
-        </div>
-        <div class="why-card">
-          <h3 data-en="After-Sales Support" data-ar="خدمة ما بعد البيع"></h3>
-          <p data-en="Maintenance and support when you need it."
-             data-ar="صيانة ودعم عند الحاجة."></p>
-        </div>
+      <div class="info">
+        <div>📞 <strong id="phoneLabel">Téléphone :</strong> <a href="tel:+212762980932">+212 762 980 932</a></div>
+        <div>✉️ <strong id="emailLabel">Email :</strong> <a href="mailto:info@solar-energy-morocco.com">info@solar-energy-morocco.com</a></div>
       </div>
-    </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section section-alt">
-    <div class="container">
-      <h2 data-en="Contact Us" data-ar="اتصل بنا"></h2>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <p><strong>Email:</strong> <a href="mailto:info@solar-energy-morocco.com">info@solar-energy-morocco.com</a></p>
-          <p><strong data-en="Phone:" data-ar="هاتف:"></strong> <a href="tel:+212762980932">+212 762 980 932</a></p>
-          <div class="contact-actions">
-            <a href="https://wa.me/212762980932" class="btn" target="_blank"
-               data-en="Chat on WhatsApp" data-ar="تحدث عبر واتساب"></a>
-          </div>
-          <p class="small" data-en="Response time: within 24 hours."
-             data-ar="وقت الرد: خلال 24 ساعة."></p>
-        </div>
-
-        <form id="contact-form" class="contact-card contact-form" novalidate>
-          <div class="form-group">
-            <label for="name" data-en="Full Name" data-ar="الاسم الكامل"></label>
-            <input id="name" name="name" type="text" required
-                   data-en-placeholder="Your name" data-ar-placeholder="اسمك" />
-          </div>
-
-          <div class="form-group">
-            <label for="email" data-en="Email Address" data-ar="البريد الإلكتروني"></label>
-            <input id="email" name="email" type="email" required
-                   data-en-placeholder="example@email.com" data-ar-placeholder="example@email.com" />
-          </div>
-
-          <div class="form-group">
-            <label for="phone" data-en="Phone Number" data-ar="رقم الهاتف"></label>
-            <input id="phone" name="phone" type="tel"
-                   data-en-placeholder="+212..." data-ar-placeholder="+212..." />
-          </div>
-
-          <div class="form-group">
-            <label for="message" data-en="Project Details" data-ar="تفاصيل المشروع"></label>
-            <textarea id="message" name="message" rows="4" required
-                      data-en-placeholder="Tell us about your project"
-                      data-ar-placeholder="أخبرنا عن مشروعك"></textarea>
-          </div>
-
-          <button type="submit" class="btn" data-en="Send Request" data-ar="أرسل الطلب"></button>
-          <p id="contact-status" class="contact-status" role="alert"></p>
-        </form>
+      <div class="small" id="footerLine">
+        © 2025 Solar Energy Morocco. Tous droits réservés.
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p data-en="© 2025 Solar Energy Morocco. All rights reserved."
-         data-ar="© 2025 الطاقة الشمسية المغرب. جميع الحقوق محفوظة."></p>
-    </div>
-  </footer>
+    <!-- Side panel -->
+    <aside class="panel side">
+      <h2 id="sideTitle">Ce que nous faisons</h2>
+      <ul id="sideList">
+        <li>Installation de panneaux solaires (maisons, fermes, entreprises)</li>
+        <li>Maintenance & dépannage électrique</li>
+        <li>Étude et conseil pour réduire vos factures</li>
+      </ul>
 
-  <script src="script.js"></script>
+      <div class="note" id="note">
+        ⏱️ Réponse rapide : nous vous répondons sous 24h.
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    const i18n = {
+      fr: {
+        dir: "ltr",
+        title: "🚧 Site en maintenance",
+        subtitle: "Nous améliorons notre site pour vous offrir une meilleure expérience. En attendant, vous pouvez nous contacter directement pour un devis gratuit.",
+        b1: "Devis gratuit",
+        b2: "Garantie & SAV",
+        b3: "Installation rapide",
+        wa: "WhatsApp",
+        call: "Appeler",
+        mail: "Email",
+        phoneLabel: "Téléphone :",
+        emailLabel: "Email :",
+        footerLine: "© 2025 Solar Energy Morocco. Tous droits réservés.",
+        sideTitle: "Ce que nous faisons",
+        sideList: [
+          "Installation de panneaux solaires (maisons, fermes, entreprises)",
+          "Maintenance & dépannage électrique",
+          "Étude et conseil pour réduire vos factures"
+        ],
+        note: "⏱️ Réponse rapide : nous vous répondons sous 24h."
+      },
+      en: {
+        dir: "ltr",
+        title: "🚧 Website under maintenance",
+        subtitle: "We are improving our website to offer you a better experience. Meanwhile, contact us directly for a free quote.",
+        b1: "Free quote",
+        b2: "Warranty & after-sales",
+        b3: "Fast installation",
+        wa: "WhatsApp",
+        call: "Call",
+        mail: "Email",
+        phoneLabel: "Phone:",
+        emailLabel: "Email:",
+        footerLine: "© 2025 Solar Energy Morocco. All rights reserved.",
+        sideTitle: "What we do",
+        sideList: [
+          "Solar panel installation (homes, farms, businesses)",
+          "Electrical maintenance & troubleshooting",
+          "Energy audits and consulting to reduce bills"
+        ],
+        note: "⏱️ Fast response: we reply within 24 hours."
+      },
+      ar: {
+        dir: "rtl",
+        title: "🚧 الموقع تحت الصيانة",
+        subtitle: "نقوم بتحسين موقعنا لتقديم تجربة أفضل. في هذه الأثناء يمكنكم التواصل معنا مباشرة للحصول على عرض مجاني.",
+        b1: "عرض مجاني",
+        b2: "ضمان وخدمة ما بعد البيع",
+        b3: "تركيب سريع",
+        wa: "واتساب",
+        call: "اتصال",
+        mail: "البريد",
+        phoneLabel: "الهاتف:",
+        emailLabel: "البريد الإلكتروني:",
+        footerLine: "© 2025 الطاقة الشمسية المغرب. جميع الحقوق محفوظة.",
+        sideTitle: "ماذا نقدم",
+        sideList: [
+          "تركيب الألواح الشمسية (منازل، مزارع، شركات)",
+          "صيانة وإصلاحات كهربائية",
+          "دراسة واستشارات لتقليل الفواتير"
+        ],
+        note: "⏱️ رد سريع: نجيب خلال 24 ساعة."
+      }
+    };
+
+    function setLang(lang){
+      const t = i18n[lang] || i18n.fr;
+      document.documentElement.lang = lang;
+      document.body.dir = t.dir;
+
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("subtitle").textContent = t.subtitle;
+
+      document.getElementById("b1").textContent = t.b1;
+      document.getElementById("b2").textContent = t.b2;
+      document.getElementById("b3").textContent = t.b3;
+
+      document.getElementById("wa").textContent = t.wa;
+      document.getElementById("call").textContent = t.call;
+      document.getElementById("mail").textContent = t.mail;
+
+      document.getElementById("phoneLabel").textContent = t.phoneLabel;
+      document.getElementById("emailLabel").textContent = t.emailLabel;
+
+      document.getElementById("footerLine").textContent = t.footerLine;
+      document.getElementById("sideTitle").textContent = t.sideTitle;
+
+      const ul = document.getElementById("sideList");
+      ul.innerHTML = "";
+      t.sideList.forEach(item=>{
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+
+      document.getElementById("note").textContent = t.note;
+
+      localStorage.setItem("lang", lang);
+    }
+
+    setLang(localStorage.getItem("lang") || "fr");
+  </script>
 </body>
 </html>
